@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tuning Playbook Research"
+  short_description: "Plan and audit evidence-driven ML experiments"
+  default_prompt: "Use the tuning playbook protocol to design or review this ML experiment, classify variables, check fairness and variance, and recommend the next study."
