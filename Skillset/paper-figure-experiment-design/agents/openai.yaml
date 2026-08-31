@@ -1,0 +1,13 @@
+interface:
+  display_name: "Paper Figure & Experiment Design"
+  short_description: "Design defensible paper figures and experiments"
+  default_prompt: "Use $paper-figure-experiment-design to audit these papers and design a teaser, method figure, and claim-testing experiment matrix."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "alphaxiv"
+      description: "Read paper PDFs and trace figures to methods and experiments"
+
+policy:
+  allow_implicit_invocation: true

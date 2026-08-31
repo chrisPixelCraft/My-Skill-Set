@@ -10,6 +10,8 @@ the task matches.
 | Skill | Use it for |
 |---|---|
 | [`human-readable-docs`](Skillset/human-readable-docs/SKILL.md) | Writing and revising human-facing Markdown, READMEs, research notes, experiment reports, benchmark summaries, and design docs without losing technical evidence. |
+| [`paper-figure-experiment-design`](Skillset/paper-figure-experiment-design/SKILL.md) | Auditing or designing AI/ML paper methods, teaser and motivation figures, method diagrams, and claim-testing experiment matrices. |
+| [`paper-story-design`](Skillset/paper-story-design/SKILL.md) | Designing or auditing a paper's claim-driven visual narrative, including teaser figures, method diagrams, and identifiable experiment suites. |
 | [`ponder-research`](Skillset/ponder-research/SKILL.md) | Scientific reasoning that involves hypotheses, mechanisms, experiment design, literature synthesis, causal interpretation, research taste, or belief updates. |
 | [`thinking-protocol`](Skillset/thinking-protocol/SKILL.md) | Careful, adaptive, multi-perspective reasoning for complex engineering, debugging, architecture, research, and document-analysis tasks. |
 | [`tuning-playbook-research`](Skillset/tuning-playbook-research/SKILL.md) | Planning, reviewing, diagnosing, and interpreting ML/DL experiments with fair tuning, explicit variable roles, variance checks, and evidence-based adoption decisions. |
@@ -32,6 +34,8 @@ Paste this request into Codex and remove any skills you do not want:
 ```text
 Use $skill-installer to install these skills:
 - https://github.com/chrisPixelCraft/My-Skill-Set/tree/main/Skillset/human-readable-docs
+- https://github.com/chrisPixelCraft/My-Skill-Set/tree/main/Skillset/paper-figure-experiment-design
+- https://github.com/chrisPixelCraft/My-Skill-Set/tree/main/Skillset/paper-story-design
 - https://github.com/chrisPixelCraft/My-Skill-Set/tree/main/Skillset/ponder-research
 - https://github.com/chrisPixelCraft/My-Skill-Set/tree/main/Skillset/thinking-protocol
 - https://github.com/chrisPixelCraft/My-Skill-Set/tree/main/Skillset/tuning-playbook-research
@@ -75,6 +79,10 @@ select one explicitly, mention it with `$skill-name` in the prompt:
 ```text
 $human-readable-docs rewrite this benchmark report for a technical reader.
 
+$paper-figure-experiment-design design a teaser, method figure, and claim-testing experiment matrix.
+
+$paper-story-design audit this paper's visual narrative and evidence coverage.
+
 $ponder-research challenge this hypothesis and design the cheapest decisive experiment.
 
 $thinking-protocol review this architecture and verify the important assumptions.
@@ -91,6 +99,28 @@ installed or changed skill does not appear, restart Codex.
 Skillset/
 ├── human-readable-docs/
 │   └── SKILL.md
+├── paper-figure-experiment-design/
+│   ├── SKILL.md
+│   ├── agents/
+│   │   └── openai.yaml
+│   ├── references/
+│   │   ├── 5w2h-templates.md
+│   │   ├── corpus-evidence.md
+│   │   ├── experiment-design.md
+│   │   ├── method-design.md
+│   │   └── visual-grammar.md
+│   └── scripts/
+│       └── inventory_paper_figures.py
+├── paper-story-design/
+│   ├── SKILL.md
+│   ├── agents/
+│   │   └── openai.yaml
+│   └── references/
+│       ├── evidence-base.md
+│       ├── experiment-story.md
+│       ├── questions-and-templates.md
+│       ├── verifier-gates.md
+│       └── visual-story.md
 ├── ponder-research/
 │   └── SKILL.md
 ├── thinking-protocol/
